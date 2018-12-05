@@ -10,11 +10,28 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            string multiple1 = Console.ReadLine();
+            int multiple2;
+            bool multiple3 = int.TryParse(multiple1, out multiple2);
+            if (multiple3==true)
+            {
+                if (multiple2 % 5 == 0)
+                {
+                    Console.WriteLine("It's multiple of 5");
+                    if (multiple2 % 2 == 0)
+                    {
+                        Console.WriteLine("It's multiple 2");
+                    }
+
+                }
+            }
+
+
             return;
             //string write = "What you want from me, jerk?" ;
             //Console.WriteLine(write);
             string read = Console.ReadLine();
-            
+             //fgfg
       
             int read2;
             bool isparsed666 = int.TryParse(read, out read2);
