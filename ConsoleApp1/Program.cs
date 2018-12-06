@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,20 +9,39 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            int[] ages = new int[] { 1, 9, 13, 16, 21, 46, 99 };
+            Console.WriteLine(ages[5]);
+            ages[5] = 100;
+            Console.WriteLine(ages[5]);
+            Console.WriteLine(ages.Length);
+            Console.ReadLine();
+            return;
+
             string multiple1 = Console.ReadLine();
             int multiple2;
             bool multiple3 = int.TryParse(multiple1, out multiple2);
+        
             if (multiple3==true)
             {
-                if (multiple2 % 5 == 0)
+                if (multiple2 % 5 == 0 && multiple2 % 2 == 0)
                 {
-                    Console.WriteLine("It's multiple of 5");
+                    Console.WriteLine("It's multiple of 5 and 2");
+                }
+
+                else
+                {
+
+                    if (multiple2 % 5 == 0)
+                    {
+                        Console.WriteLine("It's multiple of 5");
+                    }
+
                     if (multiple2 % 2 == 0)
                     {
                         Console.WriteLine("It's multiple 2");
                     }
-
                 }
+                
             }
 
 
