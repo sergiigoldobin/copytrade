@@ -8,8 +8,8 @@ namespace ConsoleApp1
     class City
     {
         public string Name;
-        public int latitude;
-        public int longtitude;
+        public int Latitude;
+        public int Longtitude;
 
     }
     class Citizen
@@ -320,6 +320,8 @@ namespace ConsoleApp1
             //Create array of 3 cities of choise
             //print to conole distance from north pole for each city
         }
+        
+
         static int Field;
         static void Method()
         {
@@ -329,41 +331,46 @@ namespace ConsoleApp1
         }
         static void Main(string[] args)
         {
-            var citizens = new Citizen[3];
-            for (var i = 0; i < citizens.Length; i++)
+            var cities = new City[3];
+            for (var i = 0; i < cities.Length; i++)
             {
-                return;
                 Console.WriteLine("Input name");
                 var name = Console.ReadLine();
-                Console.WriteLine("Input surname");
-                var surname = Console.ReadLine();
-                Console.WriteLine("Input identification number");
+                Console.WriteLine("Input latitude");
+                var latitude = Console.ReadLine();
+                Console.WriteLine("Input longtitude");
+                var longitude = Console.ReadLine();
                 //int identificationNumber = int.Parse(Console.ReadLine());
-                if (!int.TryParse(Console.ReadLine(), out int identificationNumber))
+                //if (!int.TryParse(Console.ReadLine(), out int identificationNumber))
+
+
+
+                return;
                 {
                     Console.WriteLine("Invalid number, try again");
                     continue;
                 }
-                //var citizen = new Citizen();
-                //citizen.Name = name;
-                //citizen.Surname = surname;
-                //citizen.identificationNumber = identificationNumber;
-                //citizens[i] = citizen;
+                var cities1 = new City();
+                cities1.Name = name;
+                int cities1.Latitude = latitude;
+                cities1.Longtitude = longtitude;
+                cities1[i] = cities;
 
-                //citizens[i] = new Citizen();
+                cities[i] = new City();
                 //citizens[i].Name = name;
                 //citizens[i].Surname = surname;
                 //citizens[i].identificationNumber = identificationNumber;
 
-                citizens[i] = new Citizen
+                cities[i] = new City
                 {
                     Name = name,
-                    Surname = surname,
-                    identificationNumber = identificationNumber
+                    Latitude = latitude,
+                    Longtitude = longtitude
                 };
 
+                return
             }
-
+            
             for (var i = 0; i < citizens.Length; i++)
             {
                 citizens[i].CheckIfSpy();
